@@ -87,7 +87,7 @@ section{
 }
 
 .heading{
-   background-color: var(--black);
+   background-color: var(--white);
    text-align: center;
    display: flex;
    align-items: center;
@@ -99,7 +99,7 @@ section{
 
 .heading h3{
    font-size: 4rem;
-   color:var(--white);
+   color:var(--black);
    text-transform: capitalize;
 }
 
