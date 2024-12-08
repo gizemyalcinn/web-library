@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css" />
 
-   <title>Home</title>
+   <title>BookLibrary</title>
 
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
@@ -17,8 +17,8 @@
    <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
-   
+
+<body>   
 <header class="header">
 
    <section class="flex">
@@ -31,12 +31,11 @@
       <nav class="navbar">
          <a href="home.html">Home</a>
          <a href="about.html">About</a>
-         <a href="listBooks.html">List All Books</a>
       </nav>
 
       <div class="icons">
          <a href="search.html"><i class="ri-search-2-line"></i></a>
-         <div id="user-btn" class="fas fa-user"></div>
+         <i class="ri-increase-decrease-line" id="user-btn"></i>
          <i class="ri-moon-line change-theme" id="theme-button"></i>
          <div id="menu-btn" class="fas fa-bars"></div>
       </div>
@@ -48,9 +47,7 @@
             <a href="removeBooks.html" class="delete-btn">Remove Books</a>
          </div>
       </div>
-
    </section>
-
 </header>
 
 
@@ -68,7 +65,9 @@
       <div class="content">
          <br><br>
          <p>Kültür; okumak, anlamak, görebilmek, görebildiğinden mana çıkarmak, uyanık davranmak, düşünmek, zekayı terbiye etmektir.</p>
-         <a href="menu.html" class="btn">our menu</a>
+            <br><h3>M. Kemal ATATÜRK</h3>
+
+         <a href="listBooks.html" class="btn">List All Books</a>
       </div>
 
    </div>
@@ -85,7 +84,7 @@
             <div class="content">
                <span>Premchand S. Nair - July 27, 2017</span>
                <h3>JAVA programming Fundamentals</h3>
-               <a href="listBooks.html" class="btn">see books</a>
+               <a href="listBooks.html" ></a>
             </div>
             <div class="image">
                <img src="images/java img.jpg" alt="">
@@ -96,7 +95,7 @@
             <div class="content">
                <span>Justin Hickey - July 29, 2021</span>
                <h3>Learning The C++ Programming Language</h3>
-               <a href="listBooks.html" class="btn">see books</a>
+               <a href="listBooks.html" ></a>
             </div>
             <div class="image">
                <img src="images/c++ img.jpg" alt="">
@@ -107,7 +106,7 @@
             <div class="content">
                <span>Anthony Brun - May 20, 2018</span>
                <h3>Python Programming a step by step guide from beginner to expert</h3>
-               <a href="menu.html" class="btn">see books</a>
+               <a href="menu.html"></a>
             </div>
             <div class="image">
                <img src="images/python img.jpg" alt="">
@@ -158,21 +157,8 @@
 
 </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="loader">
-   <img src="images/loader.gif" alt="">
+   <img src="images/books.gif" alt="">
 </div>
 
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
