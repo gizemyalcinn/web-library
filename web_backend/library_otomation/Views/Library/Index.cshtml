@@ -1,0 +1,126 @@
+﻿@using library_otomation.Models
+@model List<Book>
+
+@{
+    ViewData["Title"] = "Library - Book Management";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../wwwroot/css/site.css" />
+    <link rel="stylesheet" href="../Views/Shared/_Layout.cshtml.css" />
+    <!-- ==============  remıxıcons ==========-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css" />
+    <title>Book Library</title>
+    </head>
+<body>
+<header>
+    <div class="main-page">
+        <div class="mainrow">
+            <div class="main-content">
+                <h2>
+                    “Kültür; okumak, anlamak, görebilmek, <br> görebildiğinden anlam çıkarmak, uyanık davranmak,
+                    <br> düşünmek, zekayı terbiye etmektir. <br> M.Kemal ATATÜRK”
+                </h2>
+                <button class="searchInput">Tüm kitaplar</button>
+
+            </div>
+        </div>
+    </div>
+</header>
+    
+    <!--========MAIN========-->
+    <main class="main">
+        <!--=====HOME=========-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="home__title">
+                        Browse, Add & <br>
+                        Remove Books
+                    </h1>
+                    <p class="home__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.
+                    </p>
+                    <a href="#" class="button">Explore Books</a>
+                </div>
+                <div class="home__images">
+                    <div class="home__swipper swipper">
+                        <div class="swipper-wrapper">
+                            <article class="home__article swipper-slide ">
+                                <img src="images/java img.jpg" alt="image" class="home__img"/>
+                            </article>
+                            <article class="home__article swipper-slide">
+                                <img src="images/python img.jpg" alt="image" class="home__img"/>
+                            </article>
+                            <article class="home__article swipper-slide">
+                                <img src="images/c++ img.jpg" alt="image" class="home__img"/>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    @if (Model != null && Model.Any())
+    {
+        @foreach (var book in Model)
+        {
+            <div class="latest-col">
+                @* <div class="limg">
+                    <img src="@book.ImagePath" alt="@book.Title" />
+                </div> *@
+                <div class="info">
+                    <h3>@book.Name</h3>
+                    <p><b>Author:</b> @book.Author</p>
+                    <p><b>Published:</b> @book.Year</p>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>No books found.</p>
+    }
+    @*       <div class="latest-row" id="booknamesearch">
+            <div class="latest-col">
+                <div class="limg"><img src="images/c++ img.jpg"></div>
+                <div class="info">
+                    <h3>Learning The C++</h3>
+                    <p><b>Author:</b>Justin Hickey</p>
+                    <p><b>Published:</b> 2021</p>
+                </div>
+            </div>
+            <div class="latest-col">
+                <div class="limg"><img src="images/python img.jpg"></div>
+                <div class="info">
+                    <h3>Python Programming</h3>
+                    <p><b>Author:</b>Anthony Brun</p>
+                    <p><b>Published:</b> 2020</p>
+                </div>
+            </div>
+            <div class="latest-col">
+                <div class="limg"><img src="./images/java img.jpg"></div>
+                <div class="info">
+                    <h3>Java Fundamentals</h3>
+                    <p><b>Author:</b>Premchand S. Nair</p>
+                    <p><b>Published:</b> 2019</p>
+                </div>
+            </div> *@
+</>
+
+
+<script src="lib.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+
+
+</body>
+
+</html>
+
+
