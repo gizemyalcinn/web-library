@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Monster\\Desktop\\web_library\\library_otomation\\library_otomation.csproj": {}
+    "C:\\Users\\Monster\\Desktop\\webLibb\\library_otomation\\library_otomation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Monster\\Desktop\\web_library\\library_otomation\\library_otomation.csproj": {
+    "C:\\Users\\Monster\\Desktop\\webLibb\\library_otomation\\library_otomation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Monster\\Desktop\\web_library\\library_otomation\\library_otomation.csproj",
+        "projectUniqueName": "C:\\Users\\Monster\\Desktop\\webLibb\\library_otomation\\library_otomation.csproj",
         "projectName": "library_otomation",
-        "projectPath": "C:\\Users\\Monster\\Desktop\\web_library\\library_otomation\\library_otomation.csproj",
+        "projectPath": "C:\\Users\\Monster\\Desktop\\webLibb\\library_otomation\\library_otomation.csproj",
         "packagesPath": "C:\\Users\\Monster\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Monster\\Desktop\\web_library\\library_otomation\\obj\\",
+        "outputPath": "C:\\Users\\Monster\\Desktop\\webLibb\\library_otomation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -19,14 +19,15 @@
             Books.RemoveAll(book => book.Name == name);
         }
 
-        public List<Book> searchByName(string name)
+
+        public List<Book> SearchByName(string name)
         {
-            return Books.FindAll(book => book.Name == name);
+            return Books.FindAll(book => book.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
         }
 
-        public List<Book> searchByAuthor(string author)
-        { 
-            return Books.FindAll(book => book.Author == author);
+        public List<Book> SearchByAuthor(string author)
+        {
+            return Books.FindAll(book => book.Author.Equals(author, StringComparison.OrdinalIgnoreCase));
         }
 
         public List<Book> searchByYear(int year)
@@ -34,7 +35,7 @@
             return Books.FindAll(book => book.Year == year);
         }
 
-        public List<Book> listAllBooks()
+        public List<Book> ListAllBooks()
         {
             return Books;
         }

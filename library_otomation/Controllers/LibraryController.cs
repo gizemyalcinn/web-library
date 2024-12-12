@@ -17,7 +17,7 @@ namespace library_otomation.Controllers
 
         public ActionResult Index()
         {
-            var books = Lib.listAllBooks();
+            var books = Lib.ListAllBooks();
             return View();
         }
 
@@ -46,11 +46,6 @@ namespace library_otomation.Controllers
             return View("about");
         }
 
-        public IActionResult AddBookPage()
-        {
-            return View("addBook");
-        }
-
         [HttpPost]
         public IActionResult Add(int year, string name, string author)
         { 
@@ -66,17 +61,17 @@ namespace library_otomation.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpGet]
+        [HttpGet("SearchByName")]
         public IActionResult SearchByName(string name)
         {
-            var books = Lib.searchByName(name);
+            var books = Lib.SearchByName(name);
             return View(books);
         }
 
-        [HttpGet]
+        [HttpGet("SearchByAuthor")]
         public IActionResult SearchByAuthor(string author)
         { 
-            var books = Lib.searchByAuthor(author);
+            var books = Lib.SearchByAuthor(author);
             return View(books);
         }
 
@@ -90,7 +85,7 @@ namespace library_otomation.Controllers
         [HttpGet]
         public IActionResult ListAllBooks()
         {
-            var books = Lib.listAllBooks();
+            var books = Lib.ListAllBooks();
             return View(books);
         }
     }
