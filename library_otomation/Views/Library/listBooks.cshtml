@@ -1,0 +1,38 @@
+@using library_otomation.Models
+@model List<Book>
+
+@{
+    ViewData["Title"] = "Library - Book Management";
+}
+
+<div class="heading">
+   <h3>All Books</h3>
+        <p><a asp-controller="Library" asp-action="Index">home </a> <span> / menu</span></p>
+</div>
+
+<section class="products">
+
+   <div class="box-container">
+
+      <form accept="" method="post" class="box">
+          <img src="~/images/c++ img.jpg" alt="">
+          <a>2021</a>
+          <div class="name"><b>Learning The C++</b><br/>Justin Hickey</div>
+         <div class="flex"></div>
+      </form>
+
+      <form accept="" method="post" class="box">
+         <img src="~/images/java img.jpg" alt="">
+         <a>2017</a>
+         <div class="name"><b>Java Programming Fundamentals</b><br />Premchand S. Nair</div>
+         <div class="flex"></div>
+      </form>
+
+
+   </div>
+
+</section>
+
+@* <div class="loader">
+   <img src="images/books.gif" alt="">
+</div> *@
