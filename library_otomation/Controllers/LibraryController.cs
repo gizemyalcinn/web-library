@@ -47,7 +47,7 @@ namespace library_otomation.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add(int year, string name, string author)
+        public IActionResult Add(string name, string author, string year)
         { 
             var book = new Book(year, name, author);
             Lib.addBook(book);
@@ -57,11 +57,13 @@ namespace library_otomation.Controllers
         [HttpPost]
         public IActionResult Remove(string name)
         {
-            Lib.removeBook(name);
-            TempData["Message"] = "Book removed successfully";
-            return RedirectToAction("Index");
+            if (Lib.removeBook(name))
+                TempData["Message"] = "Book removed successfully";
+            else
+                TempData["Message"] = "Book not found";
+            return RedirectToAction("RemoveBooks");
         }
-
+        
         [HttpGet("Search")]
         public IActionResult SearchByName(string name)
         {
@@ -73,14 +75,7 @@ namespace library_otomation.Controllers
         public IActionResult SearchByAuthor(string author)
         { 
             var books = Lib.SearchByAuthor(author);
-            return View(books);
-        }
-
-        [HttpGet]
-        public IActionResult SearchByYear(int year)
-        {
-            var books = Lib.searchByYear(year);
-            return View(books);
+            return View("search", books);
         }
 
         [HttpGet]

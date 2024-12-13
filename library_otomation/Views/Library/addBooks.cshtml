@@ -6,8 +6,7 @@
             <h3>ADD BOOK</h3>
             <input type="text" required maxlength="250" name="name" placeholder="Enter book name" class="box">
             <input type="text" required maxlength="50" name="author" placeholder="Enter author name" class="box">
-            <input type="date" required name="publishDate" placeholder="Enter publish date" class="box">
-            <input type="file" name="bookCover" class="box">
+            <input type="number" required min="0" max="2024" name="year" placeholder="Enter publish date" class="box">
             <input type="submit" value="ADD BOOK" class="btn" name="submit">
         </form>
         @if (TempData["Message"] != null)

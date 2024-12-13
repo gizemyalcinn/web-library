@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("library_otomation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fc086bee3bf2de2fa2b27437c52caddf3022cd6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9240ca38b0b95039e24660cb87b388d5e578789")]
 [assembly: System.Reflection.AssemblyProductAttribute("library_otomation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("library_otomation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

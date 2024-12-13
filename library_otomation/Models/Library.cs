@@ -1,4 +1,6 @@
-﻿namespace library_otomation.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace library_otomation.Models
 {
     public class Library
     {
@@ -14,9 +16,13 @@
             Books.Add(book);
         }
                                 //dönüş değeri bool yapılabilir 
-        public void removeBook(string name)
+        public bool removeBook(string name)
         {
-            Books.RemoveAll(book => book.Name == name);
+            if (Books.RemoveAll(book => book.Name == name) == 1)
+            {
+                return true;
+            }
+            return false;
         }
 
 
@@ -30,10 +36,6 @@
             return Books.FindAll(book => book.Author.Equals(author, StringComparison.OrdinalIgnoreCase));
         }
 
-        public List<Book> searchByYear(int year)
-        {
-            return Books.FindAll(book => book.Year == year);
-        }
 
         public List<Book> ListAllBooks()
         {
