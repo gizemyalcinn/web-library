@@ -33,8 +33,11 @@
         </nav>
 
         <div class="icons">
-            <a asp-controller="Library" asp-action="Search"><i class="ri-search-2-line"></i></a>
-            <i class="ri-increase-decrease-line" id="user-btn"></i>
+            <a asp-controller="Library" asp-action="Search" title="Search Books"><i class="ri-search-2-line"></i></a>
+            <i class="ri-increase-decrease-line" id="user-btn" title="Book Actions"></i>
+            <button onclick="self.close()" class="exit-btn" title="Exit Application">
+                <i class="ri-logout-box-line"></i>
+            </button>
             <div id="menu-btn" class="fas fa-bars"></div>
         </div>
 
