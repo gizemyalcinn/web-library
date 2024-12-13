@@ -23,12 +23,12 @@ namespace library_otomation.Controllers
 
         public ActionResult ListBooks()
         {
-            return View("listBooks");
+            return View("listBooks", Lib.ListAllBooks());
         }
 
         public ActionResult Search()
         {
-            return View("search");
+            return View("search", null);
         }
 
         public ActionResult RemoveBooks()
@@ -52,20 +52,21 @@ namespace library_otomation.Controllers
             var book = new Book(year, name, author);
             Lib.addBook(book);
             TempData["Message"] = "Book added successfully";
-            return View("Index");
+            return RedirectToAction("addBooks");
         }
         [HttpPost]
         public IActionResult Remove(string name)
         {
             Lib.removeBook(name);
+            TempData["Message"] = "Book removed successfully";
             return RedirectToAction("Index");
         }
 
-        [HttpGet("SearchByName")]
+        [HttpGet("Search")]
         public IActionResult SearchByName(string name)
         {
             var books = Lib.SearchByName(name);
-            return View(books);
+            return View("search", books);
         }
 
         [HttpGet("SearchByAuthor")]

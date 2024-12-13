@@ -7,6 +7,33 @@
         <input type="text" class="box" name="name" placeholder="search by name" maxlength="150">
         <button type="submit" class="fas fa-search" name="search_btn"></button>
     </form>
+@*         @if (Model != null && Model.Any())
+        {
+            <h2>Search Results</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Author</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var book in Model)
+                    {
+                        <tr>
+                            <td>@book.Name</td>
+                            <td>@book.Author</td>
+                            <td>@book.Year</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else if (Model == null)
+        {
+            <p>No books found.</p>
+        } *@
 </section>
 
 <section class="search-form">
@@ -40,7 +67,7 @@
             </tbody>
         </table>
     }
-    else if (Model != null)
+    else if (Model is null || Model.Count == 0)
     {
         <p>No books found.</p>
     }

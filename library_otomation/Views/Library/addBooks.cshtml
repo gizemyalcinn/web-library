@@ -2,15 +2,18 @@
 
 <section class="form-container">
 
-    <form action="" method="post">
-        <h3>ADD BOOK</h3>
-        <input type="text" required maxlength="250" name="book name" placeholder="enter book name" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-        <input type="text" required maxlength="50" name="author name" placeholder="enter author name" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-        <input type="date" name="publish date" placeholder="enter publish date" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-        <input type="image" name="book cover" placeholder="enter book cover" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-        <input type="submit" value="ADD BOOK" class="btn" name="submit">
-    </form>
-
+        <form asp-action="Add" asp-controller="Library" method="post" enctype="multipart/form-data">
+            <h3>ADD BOOK</h3>
+            <input type="text" required maxlength="250" name="name" placeholder="Enter book name" class="box">
+            <input type="text" required maxlength="50" name="author" placeholder="Enter author name" class="box">
+            <input type="date" required name="publishDate" placeholder="Enter publish date" class="box">
+            <input type="file" name="bookCover" class="box">
+            <input type="submit" value="ADD BOOK" class="btn" name="submit">
+        </form>
+        @if (TempData["Message"] != null)
+        {
+            <p class="success-message">@TempData["Message"]</p>
+        }
 </section>
 
 <footer class="footer">

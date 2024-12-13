@@ -32,6 +32,35 @@
    </div>
 
 </section>
+<section class="products" style="padding-top: 0; min-height: 100vh;">
+    @if (Model != null && Model.Any())
+    {
+        <h2>Search Results</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.Name</td>
+                        <td>@book.Author</td>
+                        <td>@book.Year</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else if (Model is null || Model.Count == 0)
+    {
+        <p>No books found.</p>
+    }
+</section>
 
 @* <div class="loader">
    <img src="images/books.gif" alt="">

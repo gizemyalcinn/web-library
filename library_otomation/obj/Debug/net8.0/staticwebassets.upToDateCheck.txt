@@ -1,6 +1,25 @@
 wwwroot\css\site.css
+wwwroot\css\swiper-bundle.min.css
 wwwroot\favicon.ico
+wwwroot\images\ai_lib.jpg
+wwwroot\images\books.gif
+wwwroot\images\c++ img.jpg
+wwwroot\images\clock-icon.png
+wwwroot\images\email-icon.png
+wwwroot\images\java img.jpg
+wwwroot\images\lib1.webp
+wwwroot\images\libraryBright.jpg
+wwwroot\images\map-icon.png
+wwwroot\images\menu.png
+wwwroot\images\phone-icon.png
+wwwroot\images\python img.jpg
+wwwroot\images\real_lib.webp
+wwwroot\images\real-lib1.webp
+wwwroot\images\step-1.png
+wwwroot\images\step-2.png
+wwwroot\images\user-icon.png
 wwwroot\js\site.js
+wwwroot\js\swiper-bundle.min.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
